@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 )
 
+//存储查询订单接口的返回数据
 type Orderqueryresponse struct {
 	XMLName     xml.Name `xml:"xml"`
 	Return_code string   `xml:"return_code"`

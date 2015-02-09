@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+//1.得到v里面的字段的md5签名，v在创建的时候就要保证里面的字段是按照ascii从小到大的顺序填写
 func SignMD5(v interface{}, apikey string) (string, bool) {
 	var signstr bytes.Buffer
 

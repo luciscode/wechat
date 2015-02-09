@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 )
 
-//把struct数据解压出来转化为xml
+//把结构体v 转化为xml字符串，并返回
 func Endoestruct(v interface{}) (xmlresult string, err error) {
 	output, err := xml.MarshalIndent(v, "  ", "    ")
 
