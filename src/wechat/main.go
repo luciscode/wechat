@@ -126,7 +126,11 @@ func rout(w http.ResponseWriter, r *http.Request) {
 	} else if path == "/updateshakecard" {
 		fmt.Println("更新摇一摇")
 		card.Updateshakecard(w, r)
+	} else if path == "/testpost" {
+		fmt.Println("post和get测试")
+		test.Testpost(w, r)
 	}
+
 }
 
 func main() {

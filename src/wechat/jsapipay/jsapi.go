@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"wechat/auth"
 	"wechat/config"
 	"wechat/rand"
 	"wechat/unifiedorder"
@@ -35,7 +36,7 @@ func Jsapi(w http.ResponseWriter, r *http.Request) {
 	v.Spbill_create_ip = "127.0.0.1"
 	//设置openid,可以写死也可以根据code获取
 	if r.FormValue("code") != "" {
-		v.Openid = Getopenid(w, r)
+		v.Openid = auth.Getopenid(w, r)
 	} else {
 		v.Openid = "omL67jm0A1sKwystTq7WsU28MF_c"
 	}
